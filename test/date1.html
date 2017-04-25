@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<title>日历</title>
+		<link rel="stylesheet" type="text/css" href="js/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" href="css/date1.css" />
+	</head>
+	<body>
+		<div id="bg_back" >
+			<div class="swiper-container clickBox" style="">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background:url(img/bg_mood_08.png) no-repeat;background-size: cover;">
+						<div class="clickBox_time">
+							<span>4月13日</span><span>星期四</span><span>08:20:40</span>
+							<div class="clickBox_bottom">今天很高兴今天很高兴今天很高兴今天很高兴今天很高兴今天很高兴今天很高兴天很高兴</div>
+						</div>
+					</div>
+					<div class="swiper-slide" style="background:url(img/bg_mood_01.png) no-repeat;background-size: cover;">
+						<div class="clickBox_time">
+							<span>4月13日</span><span>星期五</span><span>10:30:10</span>
+							<div class="clickBox_bottom">下雨没带伞，GG了</div>
+						</div>
+					</div>
+					<div class="swiper-slide" style="background:url(img/bg_mood_07.png) no-repeat;background-size: cover;">
+						<div class="clickBox_time">
+							<span>4月13日</span><span>星期六</span><span>11:20:40</span>
+							<div class="clickBox_bottom">周末可以睡懒觉了周末可以睡懒觉了周末可以睡懒觉了</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<img src="img/list_banner.png" style="height:25rem;width:100%;position: fixed;top:0;z-index: 99;"/>
+		<div class="rl_header" >
+			<div class="b_header">
+				<span class="old"></span>
+				<p><span class="time1"></span>年<span class="time2"></span>月</p>
+				<span class="next"></span>
+
+			</div>
+			<table class="week_day">
+				<tr>
+					<td>日</td>
+					<td>一</td>
+					<td>二</td>
+					<td>三</td>
+					<td>四</td>
+					<td>五</td>
+					<td>六</td>
+				</tr>
+			</table>
+		</div>
+		<div class="calendar">
+			<div>
+				<table class="calendar_date" >
+					<tr>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+					</tr>
+					<tr>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+					</tr>
+					<tr>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+					</tr>
+					<tr>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+					</tr>
+					<tr>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+					</tr>
+					<tr>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+						<td><span></span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script src="js/date1.js"></script>
+	<script src="js/swiper-3.4.2.min.js"></script>
+	<script>
+		var mySwiper = new Swiper('.swiper-container', {
+			direction: 'horizontal',
+			loop: true
+		})
+	</script>
+
+</html>

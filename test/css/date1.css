@@ -1,0 +1,190 @@
+html {
+				font-size: 62.5%;
+			}
+			
+			body {
+				font-size: 12px;
+				font-size: 1.2rem;
+			}
+			
+			p {
+				font-size: 14px;
+				font-size: 1.4rem;
+			}
+			
+			@media only screen and (min-width: 320px) {
+				html {
+					font-size: 62.5% !important;
+				}
+			}
+			
+			@media only screen and (min-width: 640px) {
+				html {
+					font-size: 125% !important;
+				}
+			}
+			
+			@media only screen and (min-width: 750px) {
+				html {
+					font-size: 150% !important;
+				}
+			}
+			
+			@media only screen and (min-width: 1242px) {
+				html {
+					font-size: 187.5% !important;
+				}
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#bg_back{
+				position:fixed;
+				top: 0;left: 0;
+				background: rgba(0,0,0,0.5);
+				height:100%;width:100%;
+				z-index:100;visibility: hidden;
+			}
+			.rl_header{
+				position: fixed;
+				top:22rem;
+				z-index: 99;
+				width:100%;
+				background: #fff;
+				padding-top: 2rem;
+			}
+			.calendar {
+				width: 100%;
+				border-radius: 0.5rem;
+				background: #FFFFFF;
+				z-index: 1;
+				position: relative;
+				top:31rem
+			}
+			
+			.b_header {
+				position: relative;
+				height: 3rem;
+				width: 100%;
+				text-align: center;
+				color: #666666;
+				margin-bottom: 1.5rem;
+				line-height: 3rem;
+			}
+			
+			.b_header p {
+				letter-spacing: 0.1rem;
+				font-size: 1.6rem;
+			}
+			
+			/*新改动.b_header p font-size:1.6rem  .b_header margin-bottom: 2.5rem; .clickBox top:15%*/
+			.old {
+				width: 2rem;
+				height: 2rem;
+				display: block;
+				background: url(../img/back.png);
+				background-size: cover;
+				position: absolute;
+				left: 2.4rem;
+				top: 0.5rem;
+			}
+			
+			.next {
+				width: 2rem;
+				height: 2rem;
+				display: block;
+				background: url(../img/back.png);
+				background-size: cover;
+				position: absolute;
+				right: 2.4rem;
+				top: 0.5rem;
+				transform:rotate(180deg);
+			}
+			
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				text-align: center;
+				color:#828080; /*新加*/
+			}
+			
+			.week_day {
+				margin-bottom: 1rem;
+				
+			}
+			
+			.calendar_date td {
+				border: 0.1rem solid hsl(0, 15%, 95%);/*改动*/
+				height: 4rem;
+				vertical-align: text-top;
+				padding-top: 0.9rem;
+			}
+			
+			.calendar_date span {
+				margin-bottom: 0.6rem;
+				display: block;
+				font-size: 1.2rem;
+			}
+			
+			._moodimg {
+				margin: 0 auto;
+				width: 2.6rem;
+				height: 2.6rem;
+				display: block;
+				margin-bottom: 0.5rem;
+				background: url(../img/rili_xl.png);
+				background-size: cover;
+			}
+			
+			.none {
+				display: none;
+			}
+			
+			.clickBox {
+				visibility: hidden;
+				text-align: center;
+				z-index:100;
+				border-radius: 1rem;
+				position: absolute;
+				top:45%;
+				left:50%;
+				margin-top:-9.4rem;
+				margin-left:-13.2rem;
+				font-size: 1.8rem;
+				color: #666666;
+				width:26.7rem;
+				height:20.4rem;
+			}
+			
+			
+			
+			.clickBox_time {
+				position: absolute;
+				bottom: 5%;
+				width: 100%;
+				height: 30%;
+				left: 50%;
+				margin-left: -50%;
+			}
+			
+			.clickBox_time span {
+				font-size: 1.2rem;
+				color: #999999;
+				margin: 0 0.5rem;
+				line-height: 2.2rem;
+				;
+			}
+			
+			.clickBox_bottom {
+				font-size: 1.3rem;
+				color: #333333;
+				line-height: 1.5rem;
+				padding: 0 3.6rem;
+				overflow: auto;
+				height: 3.6rem;
+				
+				letter-spacing: 0.06rem;
+			}
+			
