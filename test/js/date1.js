@@ -59,6 +59,14 @@
 				document.getElementById('bg_back').style.visibility = 'visible';
 			}
 			
+			
+			/*tds[i].on('tap',function(e){
+				e = e || window.event;
+				e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+				document.getElementsByClassName('clickBox')[0].style.visibility = 'visible';
+				document.getElementById('bg_back').style.visibility = 'visible';
+			}*/
+			
 	
 		}
 	}
@@ -87,7 +95,7 @@
 		date.setMonth(_month);
 		calendar(date);
 	}
-	document.onclick = function() {
+	document.getElementById('bg_back').onclick = function() {
 		document.getElementsByClassName('clickBox')[0].style.visibility = 'hidden';
 		document.getElementById('bg_back').style.visibility = 'hidden';
 	}
