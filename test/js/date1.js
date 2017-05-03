@@ -34,13 +34,15 @@
 			//console.log(spans[x].nextSibling);
 			if(spans[x].nextSibling){
 				tds[x].removeChild(spans[x].nextSibling)
+				tds[x].style.background = '#fff'
 			}
 		}
 	
 		for(var i = firstDay; i < lastData + firstDay; i++) {
 			//console.log(i - firstDay + 1)
 			var date2 =  new Date();
-			if(date2.getMonth() == _month && i - firstDay + 1 == date.getDate()){
+			
+			if(date2.getMonth() == _month  &&  i - firstDay + 1 == date2.getDate()){
 				tds[i].style.background = '#fef8e5'
 			}else{
 				tds[i].style.background = '#fff'
@@ -58,41 +60,41 @@
 				document.getElementsByClassName('clickBox')[0].style.visibility = 'visible';
 				document.getElementById('bg_back').style.visibility = 'visible';
 			}
-			
-			
-			/*tds[i].on('tap',function(e){
-				e = e || window.event;
-				e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
-				document.getElementsByClassName('clickBox')[0].style.visibility = 'visible';
-				document.getElementById('bg_back').style.visibility = 'visible';
-			}*/
-			
-	
 		}
 	}
 	//上个月
 	document.getElementsByClassName('old')[0].onclick = function(e){
-		
 		e = e || window.event;
 		e.stopPropagation?e.stopPropagation():e.cancelBubble = true;
-		_month--;
-		if(_month<0){
-			_month = 11;
-			date.setFullYear(date.getFullYear()-1);
+		var startDate = new Date('2017/03/01 00:00:00');//起始时间
+		if(date.setMonth(date.getMonth()-1) < startDate){
+			date = startDate;
+		}else{
+			_month--;
+			if(_month<0){
+				_month = 11;
+				date.setFullYear(date.getFullYear()-1);
+			}
+			date.setMonth(_month);
 		}
-		date.setMonth(_month);
 		calendar(date);
 	};
+	
 	//下个月
 	document.getElementsByClassName('next')[0].onclick = function(e){
 		e = e || window.event;
 		e.stopPropagation?e.stopPropagation():e.cancelBubble = true;
-		_month++;
-		if(_month>11){
-			_month = 0;
-			date.setFullYear(date.getFullYear()+1);
+		var toDay = new Date();
+		if(date.setMonth(date.getMonth()+1) > toDay){
+			date = toDay;
+		}else{
+			_month++;
+			if(_month>11){
+				_month = 0;
+				date.setFullYear(date.getFullYear()+1);
+			}	
+			date.setMonth(_month);
 		}
-		date.setMonth(_month);
 		calendar(date);
 	}
 	document.getElementById('bg_back').onclick = function() {
